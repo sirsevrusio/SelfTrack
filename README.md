@@ -69,6 +69,30 @@ The installer will:
 
 ---
 
+## Installation Windows
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/SirSevrus/SelfTrack.git
+cd SelfTrack
+```
+### 2. Run the Installer Script
+```bash
+.\install.bat
+```
+The installer will:
+- Check for Python installation.
+- Install Python if missing.
+- Create a virtual environment.
+- Install all required dependencies (Flask, etc.).
+- Install PyInstaller.
+- Build the standalone executable.
+- Install the application to `/opt/SelfTrack/`.
+- Create a desktop shortcut.
+
+### 3. Launching the App
+- Run the app from the windows app menu by searching 'SelfTrack'.
+
 ## Usage
 
 1. Open SelfTrack from the Ubuntu Applications menu.
