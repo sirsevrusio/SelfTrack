@@ -1,6 +1,15 @@
 @echo off
 setlocal ENABLEDELAYEDEXPANSION
 
+:: --- Force run as Administrator ---
+>nul 2>&1 net session
+if %errorlevel% neq 0 (
+    echo [INFO] Requesting administrative privileges...
+    powershell -Command "Start-Process '%~f0' -Verb RunAs"
+    exit /b
+)
+
+:: --- Your Variables ---
 set APP_NAME=SelfTrack
 set INSTALL_DIR="C:\Program Files\%APP_NAME%"
 set SHORTCUT_NAME=%APP_NAME%.lnk
