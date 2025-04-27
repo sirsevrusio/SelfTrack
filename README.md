@@ -95,7 +95,7 @@ The installer will:
 
 ## Usage
 
-1. Open SelfTrack from the Ubuntu Applications menu.
+1. Open SelfTrack from the Ubuntu Applications menu or Windows app menu.
 2. Start a new session.
 3. As you work on questions/tasks, log each one.
 4. Pause or resume the session anytime.
@@ -107,7 +107,7 @@ The installer will:
 ## Known Limitations
 
 - Only tested and verified on Ubuntu 20.04+.
-- Not cross-platform yet (no Windows/macOS support currently).
+- Windows Installation Scripts are added but untested currently. Sadly no compatibility for linux(Arch, RedHat, Opensuse, etc) and macOs.
 - No multi-user or authentication system (single local user only).
 
 ---
