@@ -239,4 +239,4 @@ if __name__ == "__main__":
     port = 8081
     url = f"http://127.0.0.1:{port}/"
     threading.Thread(target=open_browser_when_ready, args=(url,)).start()
-    app.run(host="127.0.0.1", port=port)
+    app.run(host="127.0.0.1", port=port, debug=False)

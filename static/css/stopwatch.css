@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'tagesschrift';
+  src: url("/static/fonts/Tagesschrift-Regular.ttf") format('truetype');
+}
+
 /* General page styling */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -11,6 +16,7 @@ body {
 
 /* Navbar styles */
 nav {
+  font-family: 'tagesschrift', system-ui;
   background-color: #4a90e2;
   padding: 15px 30px;
   display: flex;
@@ -77,6 +83,7 @@ main {
 
 /* Buttons */
 button {
+  font-family: 'tagesschrift', system-ui;
   background-color: #4CAF50;
   color: white;
   border: none;
@@ -173,4 +180,11 @@ button:disabled {
   button {
     width: 80%;
   }
+}
+
+p {
+  font-family: 'tagesschrift', system-ui;
+  font-size: 18px;
+  max-width: 600px;
+  margin-bottom: 40px;
 }

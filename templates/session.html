@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Smart Stopwatch Tracker</title>
+  <title>SelfTrack</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/stopwatch.css') }}">
   <audio id="enterSound" src="{{ url_for('static', filename='misc/success.mp3') }}" preload="auto"></audio>
 </head>
 <body>
 
 <nav>
-  <div class="nav-title">Smart Stopwatch</div>
+  <div class="nav-title">SelfTrack</div>
   <div class="nav-links">
-    <a href="/start_session">Start Session</a>
+    <a href="/">Home</a>
     <a href="/results">Results</a>
   </div>
 </nav>
 
 <main>
   <div id="timerDisplay">0 seconds</div>
-
+  <p>You can start tracking by pressing the start button, the results will be saved locally and can be seen via results page.</p>
   <div id="controls">
     <button id="startBtn">Start</button>
     <button id="pauseResumeBtn" style="display: none;">Pause</button>

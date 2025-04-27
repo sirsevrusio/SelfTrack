@@ -6,6 +6,11 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    @font-face {
+      font-family: 'tagesschrift';
+      src: url("/static/fonts/Tagesschrift-Regular.ttf") format('truetype');
+    }
+    
     body {
       font-family: 'Poppins', sans-serif;
       background: #f0f2f5;
@@ -15,6 +20,7 @@
 
     /* Navbar */
     nav {
+      font-family: 'tagesschrift', system-ui;
       background-color: #ffffff;
       padding: 15px 40px;
       display: flex;
@@ -70,7 +76,7 @@
 <body>
 
 <nav>
-  <div class="nav-title">Session Tracker</div>
+  <div class="nav-title">SelfTrack</div>
   <div class="nav-links">
     <a href="/">Home</a>
     <a href="/start_session">Start Session</a>
