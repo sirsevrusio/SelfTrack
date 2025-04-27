@@ -11,27 +11,29 @@ import sys
 
 app = Flask(__name__)
 
-# --- Setup Logging ---
-LOG_FOLDER = 'logs'
-if not os.path.exists(LOG_FOLDER):
-    os.makedirs(LOG_FOLDER)
+# --- PyInstaller Support ---
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and PyInstaller """
+    if getattr(sys, 'frozen', False):
+        # Running in PyInstaller bundle
+        base_path = os.path.dirname(sys.executable)
+    else:
+        base_path = os.path.abspath(".")
+    return os.path.join(base_path, relative_path)
 
+# --- Setup Folders ---
+for folder in [resource_path('logs'), resource_path('data')]:
+    if not os.path.exists(folder):
+        os.makedirs(folder, exist_ok=True)
+
+# --- Setup Logging ---
+LOG_FOLDER = resource_path('logs')
 logging.basicConfig(
     filename=os.path.join(LOG_FOLDER, 'app.log'),
     level=logging.INFO,
     format='%(asctime)s [%(levelname)s]: %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S'
 )
-
-# --- PyInstaller Support ---
-def resource_path(relative_path):
-    """ Get absolute path to resource, works for dev and PyInstaller """
-    try:
-        # PyInstaller creates a temp folder and stores path in _MEIPASS
-        base_path = sys._MEIPASS
-    except Exception:
-        base_path = os.path.abspath(".")
-    return os.path.join(base_path, relative_path)
 
 # --- Session Control ---
 session_active = False
@@ -43,7 +45,7 @@ DB_PATH = os.path.join(DB_FOLDER, 'data.db')
 
 def init_db():
     if not os.path.exists(DB_FOLDER):
-        os.makedirs(DB_FOLDER)
+        os.makedirs(DB_FOLDER, exist_ok=True)
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
     cursor.execute('''
@@ -147,7 +149,7 @@ def report(timestamp):
 
     if not session:
         logging.warning(f"[Report] No session found for timestamp: {timestamp}")
-        return render_template(resource_path('templates/report.html'), empty_session=True)
+        return render_template('report.html', empty_session=True)
 
     session_id, total_questions, total_time_seconds = session
 
