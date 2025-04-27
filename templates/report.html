@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Session Report</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/report.css') }}">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav>
+  <div class="nav-title">Smart Stopwatch</div>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/start_session">Start Session</a>
+    <a href="/results">Results</a>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<div class="report-container">
+
+  {% if empty_session %}
+    <h1>⚠️ No Session Data</h1>
+    <p>It seems no questions were completed during the session. No data was saved.</p>
+    <a href="/start_session" class="button">Start New Session</a>
+  {% else %}
+    <h1>Session Report</h1>
+
+    <div class="session-summary">
+      <h2>📎 Id: {{ timestamp }}</h2>
+      <h2>✅ Total Questions: {{ total_questions }}</h2>
+      <h2>⏱️ Total Time: {{ total_time_seconds }} seconds</h2>
+      <h2>⚡ Average Speed: {{ avg_speed }} questions per minute</h2>
+    </div>
+
+    <h3>📝 Questions:</h3>
+    <ul class="question-list">
+      {% for qn, secs in questions %}
+        <li class="question-item">
+          <span class="question-number">Question {{ qn }}</span>
+          <span class="time-taken">{{ secs }} seconds</span>
+        </li>
+      {% endfor %}
+    </ul>
+
+    <a href="/start_session" class="button">Start New Session</a>
+  {% endif %}
+
+</div>
+
+</body>
+</html>

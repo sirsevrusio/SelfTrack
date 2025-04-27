@@ -1,0 +1,121 @@
+/* General page styles */
+body {
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f2f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+nav {
+  background-color: #4a90e2;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.nav-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #d1e3ff;
+}
+
+/* Report container */
+.report-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  margin: 40px auto;
+}
+
+/* Headings */
+h1 {
+  font-size: 2.2em;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #4a90e2;
+}
+
+h2, h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Session Summary box */
+.session-summary {
+  background: #f5f7fa;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Questions list */
+ul.question-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li.question-item {
+  background: #eef3f7;
+  margin: 10px 0;
+  padding: 12px 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+}
+
+.question-number {
+  color: #4a90e2;
+  font-weight: bold;
+}
+
+.time-taken {
+  color: #666;
+}
+
+/* Button */
+a.button {
+  display: block;
+  margin: 30px auto 0;
+  text-align: center;
+  text-decoration: none;
+  background: #4a90e2;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  width: fit-content;
+  transition: background 0.3s;
+}
+
+a.button:hover {
+  background: #357ABD;
+}

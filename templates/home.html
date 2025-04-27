@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to Session Tracker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      color: #333;
+    }
+
+    header {
+      padding: 20px 40px;
+      background-color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 28px;
+      color: #4a90e2;
+      margin: 0;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background-color: #4a90e2;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #357ABD;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    main h2 {
+      font-size: 36px;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    main p {
+      font-size: 18px;
+      color: #f0f0f0;
+      max-width: 600px;
+      margin-bottom: 40px;
+    }
+
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    footer {
+      padding: 10px;
+      background: #fff;
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+    }
+
+    /* Special stop button */
+    .btn-danger {
+      background-color: #e53935;
+    }
+
+    .btn-danger:hover {
+      background-color: #c62828;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Session Tracker</h1>
+  <a href="/results" class="btn">View Results</a>
+</header>
+
+<main>
+  <h2>Track your progress, improve your speed!</h2>
+  <p>Start a session to monitor how quickly and efficiently you answer questions. Analyze your performance and track your improvement over time!</p>
+
+  <div class="actions">
+    <a href="/start_session" class="btn">Start New Session</a>
+    <a href="/results" class="btn">View Past Results</a>
+
+    <!-- Stop server button -->
+    <button id="stopServerBtn" class="btn btn-danger">🛑 Stop Server</button>
+  </div>
+</main>
+
+<footer>
+  &copy; 2025 Session Tracker | Made with ❤️ by SirSevrus
+</footer>
+
+<script>
+const stopServerBtn = document.getElementById('stopServerBtn');
+
+stopServerBtn.addEventListener('click', function() {
+  if (confirm('Are you sure you want to stop the server? If you agree then after hitting yes you can leave this page.')) {
+    fetch('/stop', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: new URLSearchParams({ key: '5509' })  // Securely sending the secret key
+    })
+    .then(response => {
+      if (response.ok) {
+        return response.text();
+      } else {
+        throw new Error('Failed to stop server: ' + response.statusText);
+      }
+    })
+    .then(data => {
+      alert(data);
+    })
+    .catch(error => {
+      alert('Error: ' + error.message);
+    });
+  }
+});
+</script>
+
+</body>
+</html>

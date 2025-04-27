@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Stopwatch Tracker</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/stopwatch.css') }}">
+  <audio id="enterSound" src="{{ url_for('static', filename='misc/success.mp3') }}" preload="auto"></audio>
+</head>
+<body>
+
+<nav>
+  <div class="nav-title">Smart Stopwatch</div>
+  <div class="nav-links">
+    <a href="/start_session">Start Session</a>
+    <a href="/results">Results</a>
+  </div>
+</nav>
+
+<main>
+  <div id="timerDisplay">0 seconds</div>
+
+  <div id="controls">
+    <button id="startBtn">Start</button>
+    <button id="pauseResumeBtn" style="display: none;">Pause</button>
+    <button id="stopBtn" style="display: none;">Stop</button>
+    <button id="questionCompleteBtn" style="display: none;" disabled>Question Complete</button>
+  </div>
+</main>
+
+<script src="{{ url_for('static', filename='js/stopwatch.js') }}"></script>
+
+</body>
+</html>
