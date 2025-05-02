@@ -9,8 +9,7 @@ SelfTrack is a simple yet powerful self-tracking and session recording tool. It 
 - **Project Name:** SelfTrack
 - **Author:** [SirSevrus](https://github.com/SirSevrus)
 - **Repository URL:** [https://github.com/SirSevrus/SelfTrack](https://github.com/SirSevrus/SelfTrack)
-- **Supported OS:** Ubuntu (tested)
-- **Not Tested On:** Windows, macOS
+- **Supported OS:** Currently in Development to support windows
 
 ---
 
@@ -22,7 +21,6 @@ SelfTrack is a simple yet powerful self-tracking and session recording tool. It 
 - Visualize historical performance (questions completed, total time, average speed).
 - Automatic logging with timestamped logs.
 - Bundled as a standalone executable using PyInstaller.
-- Ubuntu desktop integration with launcher entry.
 
 ---
 
@@ -37,78 +35,33 @@ SelfTrack is a simple yet powerful self-tracking and session recording tool. It 
 
 ---
 
-## Installation Guide (Ubuntu Only)
-
-### 1. Clone the Repository
-```bash
-git clone https://github.com/SirSevrus/SelfTrack.git
-cd SelfTrack
-```
-
-### 2. Run the Installer Script
-```bash
-chmod +x install.sh
-./install.sh
-```
-The installer will:
-- Check for Python installation.
-- Install Python if missing.
-- Create a virtual environment.
-- Install all required dependencies (Flask, etc.).
-- Install PyInstaller.
-- Build the standalone executable.
-- Install the application to `/opt/SelfTrack/`.
-- Create a desktop shortcut.
-
-### 3. Launching the App
-- Search for **SelfTrack** in your Applications menu.
-- Or run manually:
-```bash
-/opt/SelfTrack/SelfTrack
-```
-
----
-
 ## Installation Windows
+<mark> We are currently developing the installer for the windows, so there are no installers available for windows, you can run the code driectly.</mark>
+
+### Requirements
+- 3.13 >= Python >= 3.10, it is not necessary to use the versions i said, if you want to use a newer version you are free to do that, Download python from [python.org](https://www.python.org/downloads/)
+- No dependency on the system's architecture.
 
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/SirSevrus/SelfTrack.git
 cd SelfTrack
 ```
-### 2. Run the Installer Script
+### 2. Install the requirements
 ```bash
-.\install.bat
+pip install -r requirements.txt
 ```
-The installer will:
-- Check for Python installation.
-- Install Python if missing.
-- Create a virtual environment.
-- Install all required dependencies (Flask, etc.).
-- Install PyInstaller.
-- Build the standalone executable.
-- Install the application to `/opt/SelfTrack/`.
-- Create a desktop shortcut.
 
-### 3. Launching the App
-- Run the app from the windows app menu by searching 'SelfTrack'.
+### 3. Run the application
+```python
+python app.py
+```
 
-## Usage
-
-1. Open SelfTrack from the Ubuntu Applications menu or Windows app menu.
-2. Start a new session.
-3. As you work on questions/tasks, log each one.
-4. Pause or resume the session anytime.
-5. When finished, save the session.
-6. View detailed session reports and historical performance.
-
----
-
-## Known Limitations
-
-- Only tested and verified on Ubuntu 20.04+.
-- Windows Installation Scripts are added but untested currently. Sadly no compatibility for linux(Arch, RedHat, Opensuse, etc) and macOs.
-- No multi-user or authentication system (single local user only).
+### 4. Launching the App
+- you can run it directly via command - (Make sure to execute it in the directory where app.py is located)
+```python
+python app.py
+```
 
 ---
 
@@ -123,7 +76,7 @@ The installer will:
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the GNU GPL License - [Check here](https://github.com/sirsevrusio/SelfTrack/blob/windows/LICENSE)
 
 ---
 
