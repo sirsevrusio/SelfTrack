@@ -70,32 +70,28 @@ The installer will:
 ---
 
 ## Installation Windows
+<mark>NOTE</mark> : Currently the python based installer is in development, You can use it freely, after installation it will tell you where the application is installed you can run it from there.
 
-### 1. Clone the Repository
-```bash
-git clone https://github.com/SirSevrus/SelfTrack.git
-cd SelfTrack
-```
-### 2. Run the Installer Script
-```bash
-.\install.bat
-```
-The installer will:
-- Check for Python installation.
-- Install Python if missing.
-- Create a virtual environment.
-- Install all required dependencies (Flask, etc.).
-- Install PyInstaller.
-- Build the standalone executable.
-- Install the application to `/opt/SelfTrack/`.
-- Create a desktop shortcut.
+## 1. INSTALLATION
+- Downloading the installer, you can download the installer.py from the repository directly and run it via python installer.py. Also it requires python to be installed, you can download a python from [python.org](python.org).
+- The Installer Will -
+   - Installs the required libraries automatically.
+   - Builds the executable on client's device to be free from architecture dependency.
+   - Copies the executable to the directory provided at the end.
+- The Installer Will NOT -
+   - Collect any data regarding you.
+   - Doesn't requires manual installation of libraries, it will handle them itself.
+   - Cleans the source files, SRRY I will fix it soon.
 
-### 3. Launching the App
-- Run the app from the windows app menu by searching 'SelfTrack'.
+### 2. Launching the App
+- Run the app from the windows app menu by searching 'SelfTrack'. or manually from the path basically
+```bash
+ C:\\Users\\{username}\\.SelfTrack\\SelfTrack.exe
+```
 
 ## Usage
 
-1. Open SelfTrack from the Ubuntu Applications menu or Windows app menu.
+1. Open SelfTrack from the Ubuntu Applications menu or Windows app menu or launch manually.
 2. Start a new session.
 3. As you work on questions/tasks, log each one.
 4. Pause or resume the session anytime.
@@ -106,8 +102,8 @@ The installer will:
 
 ## Known Limitations
 
-- Only tested and verified on Ubuntu 20.04+.
-- Windows Installation Scripts are added but untested currently. Sadly no compatibility for linux(Arch, RedHat, Opensuse, etc) and macOs.
+- Works fine on debian based linux operating systems and windows that supports python3.
+- Windows Installation Scripts are added but not finished. Sadly no compatibility for linux(Arch, RedHat, Opensuse, etc) and macOs.
 - No multi-user or authentication system (single local user only).
 
 ---
@@ -123,7 +119,7 @@ The installer will:
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the GNU GPL License - [Check here](https://github.com/sirsevrusio/SelfTrack/blob/windows/LICENSE)
 
 ---
 
