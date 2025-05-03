@@ -36,7 +36,7 @@ SelfTrack is a simple yet powerful self-tracking and session recording tool. It 
 ---
 
 ## Installation Windows
-<mark> We are currently developing the installer for the windows, Luckily there is an installer available for windows, Its unfinished currently but it is cross platform compatible and also builds the application perfectly, just lacks some finishes.</mark>
+<mark> We are currently developing the installer for the windows, Luckily there is an installer available for windows, Its unfinished currently but it is cross platform compatible and also builds the application perfectly, just lacks some finishes. Check the installer directory for installer.</mark>
 
 ### Requirements
 - 3.13 >= Python >= 3.10, it is not necessary to use the versions i said, if you want to use a newer version you are free to do that, Download python from [python.org](https://www.python.org/downloads/)
