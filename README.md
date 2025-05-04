@@ -82,6 +82,7 @@ The installer will:
    - Collect any data regarding you.
    - Doesn't requires manual installation of libraries, it will handle them itself.
    - Cleans the source files, SRRY I will fix it soon.
+   - Doesn't creates the shortcut or launcher for the application to be used via application menu directly. [WORKING ON IT CURRENTLY]
 
 ### 2. Launching the App
 - Run the app from the windows app menu by searching 'SelfTrack'. or manually from the path basically
