@@ -72,7 +72,7 @@ The installer will:
 ## Installation Windows
 <mark>NOTE</mark> : Currently the python based installer is in development, You can use it freely, after installation it will tell you where the application is installed you can run it from there.
 
-** You will find the installer at ** [SelfTrackInstaller](https://github.com/sirsevrusio/selftrackinstaller)
+**You will find the installer at** [SelfTrackInstaller](https://github.com/sirsevrusio/selftrackinstaller)
 
 ## 1. INSTALLATION
 - Downloading the installer, you can download the installer from the repository directly [HERE](https://github.com/sirsevrusio/SelfTrack/raw/refs/heads/main/installer/installer.py) and run it via python installer.py. Also it requires python to be installed, you can download a python from [python.org](python.org).
