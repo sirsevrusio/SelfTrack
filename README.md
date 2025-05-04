@@ -73,7 +73,7 @@ The installer will:
 <mark>NOTE</mark> : Currently the python based installer is in development, You can use it freely, after installation it will tell you where the application is installed you can run it from there.
 
 ## 1. INSTALLATION
-- Downloading the installer, you can download the installer.py from the repository directly and run it via python installer.py. Also it requires python to be installed, you can download a python from [python.org](python.org).
+- Downloading the installer, you can download the installer from the repository directly [HERE](https://github.com/sirsevrusio/SelfTrack/raw/refs/heads/main/installer/installer.py) and run it via python installer.py. Also it requires python to be installed, you can download a python from [python.org](python.org).
 - The Installer Will -
    - Installs the required libraries automatically.
    - Builds the executable on client's device to be free from architecture dependency.
